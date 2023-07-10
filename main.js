@@ -77,4 +77,7 @@ ScrollReveal({
   #about header, 
   #about .content`)
 
-  
+  function openForm() {
+    var form = document.getElementById("myForm");
+    form.classList.toggle("show");
+}

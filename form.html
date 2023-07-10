@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    /* Estilos para a aba lateral */
+    #myForm {
+      width: 300px;
+      position: fixed;
+      top: 0;
+      right: -300px;
+      height: 100%;
+      background-color: #f2f2f2;
+      padding: 20px;
+      transition: right 0.3s ease-in-out;
+      display: none;
+      /* Adicionado para esconder o formulário por padrão */
+    }
+
+    #myForm.show {
+      right: 0;
+      display: block;
+      /* Adicionado para exibir o formulário quando for mostrado */
+    }
+
+    #myForm label {
+      display: block;
+      margin-bottom: 10px;
+      color: #0088cc;
+      font-weight: bold;
+    }
+
+    #myForm input[type="text"],
+    #myForm input[type="email"],
+    #myForm textarea,
+    #myForm select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #0088cc;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    #myForm button {
+      background-color: #0088cc;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    #myForm button:hover {
+      background-color: #0066aa;
+    }
+
+    @media only screen and (max-width: 600px) {
+
+      /* Estilos para o botão de abrir o formulário */
+      #openFormButton {
+        display: block;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #0088cc;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        z-index: 9999;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <button id="openFormButton" onclick="openForm()">Abrir Formulário</button>
+
+  <div id="myForm">
+    <form action="https://formspree.io/f/mknlnzov" method="POST">
+      <!-- Seu formulário aqui -->
+      <div class="cs-form-group">
+        <label for="input-0-e6cafc64-5bd1-4dfc-aa1b-fddd27d32dce">Nome da Empresa/Razão Social</label>
+        <input type="text" tabindex="1" id="input-0-e6cafc64-5bd1-4dfc-aa1b-fddd27d32dce"
+          name="input[0|Nome da Empresa/Razão Social]" placeholder="Nome da Empresa/Razão Social *" required=""
+          aria-required="true">
+      </div>
+
+      <div class="cs-form-group">
+        <label for="input-1-e6cafc64-5bd1-4dfc-aa1b-fddd27d32dce">CNPJ</label>
+        <input type="text" tabindex="1" id="input-1-e6cafc64-5bd1-4dfc-aa1b-fddd27d32dce" name="input[1|CNPJ]"
+          placeholder="CNPJ *" required="" aria-required="true">
+      </div>
+
+      <!-- Resto do formulário -->
+
+      <div class="cs-form-group">
+        <p class="cs-form-message" tabindex="2"
+          data-success="Agendamento realizado com sucesso! Em até 60 minutos lhe enviaremos o agendamento no formato pdf. Após as 17 horas você só receberá o pdf no dia posterior no período da manhã.">
+        </p>
+        <button class="cs-button cs-form-submit cs-button-theme-1" tabindex="1">
+          <span>ENVIAR AGENDAMENTO</span>
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    function openForm() {
+      var form = document.getElementById("myForm");
+      form.classList.toggle("show");
+    }
+  </script>
+
+</body>
+
+</html>
