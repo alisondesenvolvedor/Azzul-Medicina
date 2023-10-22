@@ -1,0 +1,47 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $to = "exames@azzulmedicina.com.br"; // Endereço de e-mail de destino
+    $subject = "Formulário de Agendamento de ASO"; // Assunto do e-mail
+
+    // Recupere os dados do formulário
+    $nome_empresa = $_POST["input[0|Nome da Empresa/Razão Social]"];
+    $cnpj = $_POST["input[1|CNPJ]"];
+    $telefone = $_POST["input[2|Telefone]"];
+    $email = $_POST["input[3|E-mail]"];
+    $nome_colaborador = $_POST["input[4|Nome do colaborador]"];
+    $data_nascimento = $_POST["input[5|Data de nascimento]"];
+    $rg = $_POST["input[6|RG com órgão emissor, UF de emissão, data de emissão]"];
+    $cpf = $_POST["input[7|CPF]"];
+    $setor = $_POST["input[8|Setor]"];
+    $funcao = $_POST["input[9|Função]"];
+    $tipo_aso = $_POST["input[10|Escolha o tipo de ASO]"];
+    $data_admissao = $_POST["input[11|Data de admissão]"];
+    $data_exame = $_POST["input[12|Data do exame / agendamento]"];
+    $exames_complementares = $_POST["input[13|Caso tenha exames complementares, escreva aqui.]"];
+
+    // Crie o corpo do e-mail
+    $message = "Nome da Empresa/Razão Social: $nome_empresa\n";
+    $message .= "CNPJ: $cnpj\n";
+    $message .= "Telefone: $telefone\n";
+    $message .= "E-mail: $email\n";
+    $message .= "Nome do colaborador: $nome_colaborador\n";
+    $message .= "Data de nascimento: $data_nascimento\n";
+    $message .= "RG com órgão emissor, UF de emissão, data de emissão: $rg\n";
+    $message .= "CPF: $cpf\n";
+    $message .= "Setor: $setor\n";
+    $message .= "Função: $funcao\n";
+    $message .= "Escolha o tipo de ASO: $tipo_aso\n";
+    $message .= "Data de admissão: $data_admissao\n";
+    $message .= "Data do exame / agendamento: $data_exame\n";
+    $message .= "Caso tenha exames complementares:\n$exames_complementares";
+
+    // Envie o e-mail
+    mail($to, $subject, $message, "From: $email");
+
+    // Redirecione para uma página de confirmação
+    header("Location: confirmacao.html");
+} else {
+    // Redirecione para uma página de erro
+    header("Location: erro.html");
+}
+?>
