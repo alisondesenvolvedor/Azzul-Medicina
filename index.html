@@ -33,6 +33,7 @@
         </ul>
 
         <a class="button" onclick="openForm()">Agende sua consulta</a>
+        
 
 
 
@@ -179,109 +180,104 @@
     <div id="myForm">
       <a class="button" onclick="closeForm()">Sair</a>
       <form method="post" action="envia.php" name="meuForm">
-        <div class="cs-form-group">
-          <label for="nome_empresa">Nome da Empresa/Razão Social</label>
-          <input id="nome_empresa" name="input[0|Nome da Empresa/Razão Social]" placeholder="Nome da Empresa/Razão Social *" required type="text" />
-        </div>
-    
-        <div class="cs-form-group">
-          <label for="cnpj">CNPJ</label>
-          <input id="cnpj" name="input[1|CNPJ]" placeholder="CNPJ *" required type="text" />
-        </div>
-    
-        <div class="cs-form-group">
-          <label for="telefone">Telefone</label>
-          <input id="telefone" name="input[2|Telefone]" placeholder="Telefone *" required type="text" />
-        </div>
-    
-        <div class="cs-form-group">
-          <label for="email">E-mail</label>
-          <input id="email" name="input[3|E-mail]" placeholder="E-mail *" required type="email" />
-        </div>
-    
-        <div class="cs-form-group">
-          <label for="nome_colaborador">Nome do colaborador</label>
-          <input id="nome_colaborador" name="input[4|Nome do colaborador]" placeholder="Nome do colaborador *" required type="text" />
-        </div>
-    
-        <div class="cs-form-group">
-          <label for="data_nascimento">Data de nascimento</label>
-          <input id="data_nascimento" name="input[5|Data de nascimento]" placeholder="Data de nascimento *" required type="text" />
-        </div>
-    
-        <div class="cs-form-group">
-          <label for="rg">RG com órgão emissor, UF de emissão, data de emissão</label>
-          <input id="rg" name="input[6|RG com órgão emissor, UF de emissão, data de emissão]" placeholder="RG com órgão emissor, UF de emissão, data de emissão *" required type="text" />
-        </div>
-    
-        <div class="cs-form-group">
-          <label for="cpf">CPF</label>
-          <input id="cpf" name="input[7|CPF]" placeholder="CPF *" required type="text" />
-        </div>
-    
-        <div class="cs-form-group">
-          <label for="setor">Setor</label>
-          <input id="setor" name="input[8|Setor]" placeholder="Setor *" required type="text" />
-        </div>
-    
-        <div class="cs-form-group">
-          <label for="funcao">Função</label>
-          <input id="funcao" name="input[9|Função]" placeholder="Função *" required type="text" />
-        </div>
-    
-        <div class="cs-form-group">
-          <label for="tipo_aso">Escolha o tipo de ASO</label>
-          <select id="tipo_aso" name="input[10|Escolha o tipo de ASO]" required>
-            <option value="" disabled selected>Escolha o tipo de ASO *</option>
-            <option value="Admissional">Admissional</option>
-            <option value="Periódico">Periódico</option>
-            <option value="Demissional">Demissional</option>
-            <option value="Retorno ao Trabalho">Retorno ao Trabalho</option>
-            <option value="Mudança de Função">Mudança de Função</option>
-          </select>
-        </div>
-    
-        <div class="cs-form-group">
-          <label for="data_admissao">Data de admissão</label>
-          <input id="data_admissao" name="input[11|Data de admissão]" placeholder="Data de admissão *" required type="text" />
-        </div>
-    
-        <div class="cs-form-group">
-          <label for="data_exame">Data do exame / agendamento</label>
-          <input id="data_exame" name="input[12|Data do exame / agendamento]" placeholder="Data do exame / agendamento *" required type="text" />
-        </div>
-    
-        <div class="cs-form-group">
-          <label for="exames_complementares">Caso tenha exames complementares, escreva aqui.</label>
-          <textarea id="exames_complementares" name="input[13|Caso tenha exames complementares, escreva aqui.]" placeholder="Caso tenha exames complementares, escreva aqui."></textarea>
-        </div>
-    
-        <div class="cs-form-group">
-          <p class="cs-form-message" data-success="Agendamento realizado com sucesso! Em até 60 minutos lhe enviaremos o agendamento no formato pdf. Após as 17 horas você só receberá o pdf no dia posterior no período da manhã."></p>
-          <button class="cs-button cs-form-submit cs-button-theme-1" tabindex="1"><span>ENVIAR AGENDAMENTO</span></button>
-        </div>
+          <div class="cs-form-group">
+              <label for="nome_empresa">Nome da Empresa/Razão Social</label>
+              <input id="nome_empresa" name="NomeEmpresaRazaoSocial" placeholder="Nome da Empresa/Razão Social *" required type="text" />
+          </div>
+  
+          <div class="cs-form-group">
+              <label for="cnpj">CNPJ</label>
+              <input id="cnpj" name="CNPJ" placeholder="CNPJ *" required type="text" />
+          </div>
+  
+          <div class= "cs-form-group">
+              <label for="telefone">Telefone</label>
+              <input id="telefone" name="Telefone" placeholder="Telefone *" required type="text" />
+          </div>
+  
+          <div class="cs-form-group">
+              <label for="email">E-mail</label>
+              <input id="email" name="Email" placeholder="E-mail *" required type="email" />
+          </div>
+  
+          <div class="cs-form-group">
+              <label for="nome_colaborador">Nome do colaborador</label>
+              <input id="nome_colaborador" name="NomeColaborador" placeholder="Nome do colaborador *" required type="text" />
+          </div>
+  
+          <div class="cs-form-group">
+              <label for="data_nascimento">Data de nascimento</label>
+              <input id="data_nascimento" name="DataNascimento" placeholder="Data de nascimento *" required type="text" />
+          </div>
+  
+          <div class="cs-form-group">
+              <label for="rg">RG com órgão emissor, UF de emissão, data de emissão</label>
+              <input id="rg" name="RG" placeholder="RG com órgão emissor, UF de emissão, data de emissão *" required type="text" />
+          </div>
+  
+          <div class="cs-form-group">
+              <label for="cpf">CPF</label>
+              <input id="cpf" name="CPF" placeholder="CPF *" required type="text" />
+          </div>
+  
+          <div class="cs-form-group">
+              <label for="setor">Setor</label>
+              <input id="setor" name="Setor" placeholder="Setor *" required type="text" />
+          </div>
+  
+          <div class="cs-form-group">
+              <label for="funcao">Função</label>
+              <input id="funcao" name="Funcao" placeholder="Função *" required type="text" />
+          </div>
+  
+          <div class="cs-form-group">
+              <label for="tipo_aso">Escolha o tipo de ASO</label>
+              <select id="tipo_aso" name="TipoASO" required>
+                  <option value="" disabled selected>Escolha o tipo de ASO *</option>
+                  <option value="Admissional">Admissional</option>
+                  <option value="Periódico">Periódico</option>
+                  <option value="Demissional">Demissional</option>
+                  <option value="RetornoTrabalho">Retorno ao Trabalho</option>
+                  <option value="MudancaFuncao">Mudança de Função</option>
+              </select>
+          </div>
+  
+          <div class="cs-form-group">
+              <label for="data_admissao">Data de admissão</label>
+              <input id="data_admissao" name="DataAdmissao" placeholder="Data de admissão *" required type="text" />
+          </div>
+  
+          <div class="cs-form-group">
+              <label for="data_exame">Data do exame / agendamento</label>
+              <input id="data_exame" name="DataExameAgendamento" placeholder="Data do exame / agendamento *" required type="text" />
+          </div>
+  
+          <div class="cs-form-group">
+              <label for="exames_complementares">Caso tenha exames complementares, escreva aqui.</label>
+              <textarea id="exames_complementares" name="ExamesComplementares" placeholder="Caso tenha exames complementares, escreva aqui."></textarea>
+          </div>
+  
+          <div class="cs-form-group">
+              <p class="cs-form-message" data-success="Agendamento realizado com sucesso! Em até 60 minutos lhe enviaremos o agendamento no formato pdf. Após as 17 horas você só receberá o pdf no dia posterior no período da manhã."></p>
+              <button class="cs-button cs-form-submit cs-button-theme-1" tabindex="1"><span>ENVIAR AGENDAMENTO</span></button>
+          </div>
       </form>
-
-
- 
-
-
-      <script>
-        function openForm() {
+  </div>
+  
+  <script>
+      function openForm() {
           var form = document.getElementById("myForm");
           form.classList.toggle("show");
-
-
-        }
-
-
-
-        function closeForm() {
+      }
+  
+      function closeForm() {
           var form = document.getElementById("myForm");
           form.classList.remove("show");
-        }
-
-      </script>
+      }
+  </script>
+  </body>
+  </html>
+  
 
   </nav>
 
@@ -304,6 +300,7 @@
 
             Agende seu atendimento
           </a>
+          
         </div>
       </div>
 
@@ -532,11 +529,8 @@
 
         <div class="content">
           <p>
-            Desde sua fundação, a Azzul Medicina Ocupacional tem se dedicado a promover a saúde e o bem-estar dos
-            trabalhadores, bem como a garantir a conformidade com as normas e regulamentos de saúde e segurança no
-            trabalho. A equipe de profissionais altamente qualificados da empresa, composta por médicos do trabalho,
-            enfermeiros, técnicos de segurança e outros especialistas, está empenhada em fornecer serviços de qualidade
-            e personalizados.
+            Desde sua fundação, a Azzul Medicina Ocupacional tem se dedicado a promover a saúde e o bem-estar dos trabalhadores, bem como a garantir a conformidade com as normas e regulamentos de saúde e segurança no trabalho. Realizamos exames clínicos e laboratoriais. Oferecemos gestão em  SST(Saúde e Segurança do Trabalho).
+            <p>Estamos localizados no Centro do Rio de Janeiro, e funcionamos das 8 às 12 horas, chegar com . Ligue agora e agende o seu atendimento. É necessário chegar com 20 minutos de antecedência.</p>
           </p>
         </div>
       </div>
@@ -567,7 +561,9 @@
                   stroke="#00856F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
 
-              Avenida Presidente Vargas, 529, 2º andar - Centro - Rio de Janeiro - RJ
+              Avenida Presidente Vargas, 435, 9º andar, 
+              Salas 903 e 904 Centro - Rio de Janeiro <br> 
+             
             </li>
             <li>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -576,7 +572,7 @@
                 <path d="M22 6L12 13L2 6" stroke="#00856F" stroke-width="2" stroke-linecap="round"
                   stroke-linejoin="round" />
               </svg>
-
+              Contato (21) 3527-0727. (Atendimento das 8 as 12h). 
               contato@email.com
             </li>
           </ul>
@@ -589,8 +585,8 @@
         </div>
       </div>
 
-      <div class="col-b">
-        <img class="imagem" src="./assets/homem-com-moletom-bege-mexendo-no-celular.png"
+      <div class="col-b" style="margin-top: -50px ;">
+        <img class="imagem" src="assets/azzul_atendi (1).png"
           alt="Homem com moletom bege mexendo no celular e sorrindo" />
       </div>
     </div>
@@ -662,7 +658,11 @@
       <path d="M13 20L20 13L27 20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
     </svg>
   </a>
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <a href="https://api.whatsapp.com/send?phone=552130823838" style="position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow: 1px 1px 2px #888;
+    z-index:1000;" target="_blank">
+  <i style="margin-top:16px" class="fa fa-whatsapp"></i>
+  </a>
 
   <!-- ScrollReaveal Lib -->
   <script src="https://unpkg.com/scrollreveal"></script>

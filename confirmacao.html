@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Agendamento Realizado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        h1 {
+            color: #0088cc;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .redirect-message {
+            font-size: 16px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Agendamento realizado com sucesso!</h1>
+    <p>Em até 60 minutos lhe enviaremos o agendamento no formato PDF.</p>
+    <p class="redirect-message">Você será redirecionado para a página principal em <span id="countdown">5</span> segundos.</p>
+</div>
+
+<script>
+    // Redirecionamento após 3 segundos
+    var countdown = 5; // Tempo em segundos
+    var countdownElement = document.getElementById("countdown");
+
+    function updateCountdown() {
+        countdown--;
+        countdownElement.textContent = countdown;
+
+        if (countdown <= 0) {
+            window.location.href = "index.html"; // Substitua pelo URL da página principal
+        }
+    }
+
+    setInterval(updateCountdown, 1000);
+</script>
+</body>
+</html>

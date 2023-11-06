@@ -386,7 +386,7 @@ body.menu-expanded button path {
 
 /* ====================== ABOUT ===================== */
 #about {
-  background-color: var(--brand-beige-color);
+  background-color: ;
   text-align: left;
 }
 
@@ -751,4 +751,24 @@ nav.scroll {
   color: black; /* Substitua var(--headline-color) pela cor desejada */
 }
 
+
+.whatsapp-button {
+  display: inline-block;
+  background-color: #25d366;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 25px;
+  transition: background-color 0.3s;
+}
+
+.whatsapp-button i {
+  margin-right: 10px; /* Espaço entre o ícone e o texto */
+}
+
+.whatsapp-button:hover {
+  background-color: #128c7e;
+}
 

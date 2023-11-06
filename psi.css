@@ -1,0 +1,134 @@
+/* Definindo estilos para o corpo da página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos para o cabeçalho */
+header {
+  background-color: #0074b8;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Estilos para o título do cabeçalho */
+header h1 {
+  font-size: 36px;
+}
+
+/* Estilos para a barra de navegação */
+/* Estilos para a barra de navegação */
+/* Estilos para a barra de navegação */
+/* Estilos para a barra de navegação */
+/* Estilos para a barra de navegação */
+nav {
+  background-color: #005b99;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+/* Estilos para a lista de navegação */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+/* Estilos para o logotipo */
+.nav-logo {
+  order: 1; /* Coloca o logotipo à esquerda */
+  padding: 10px;
+}
+
+/* Estilos para a imagem do logotipo */
+.nav-logo img {
+  max-width: 100px; /* Ajuste o tamanho do logotipo conforme necessário */
+}
+
+/* Estilos para os itens da lista de navegação */
+nav li {
+  margin: 0 15px;
+  order: 2; /* Coloca os itens à direita */
+}
+
+/* Estilos para os links de navegação */
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+/* Estilos para os links de navegação quando o mouse passa por cima */
+nav a:hover {
+  color: #0074b8;
+}
+
+
+
+
+/* Estilos para as seções */
+main {
+  padding: 20px;
+}
+
+/* Estilos para as seções com fundo azul claro */
+.secao1, .secao2 {
+  background-color: #cee6f2;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Estilos para os títulos das seções */
+h2 {
+  font-size: 24px;
+  color: #0074b8;
+}
+
+/* Estilos para o rodapé */
+footer {
+  background-color: #005b99;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* Estilos para links no rodapé */
+footer a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Estilos para o script.js (opcional) */
+/* Altere ou adicione estilos conforme necessário */
+/* Estilos para o botão do WhatsApp */
+/* Estilos para o botão do WhatsApp */
+.whatsapp-button {
+  display: inline-block;
+  background-color: #25d366;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 25px;
+  transition: background-color 0.3s;
+}
+
+.whatsapp-button i {
+  margin-right: 10px; /* Espaço entre o ícone e o texto */
+}
+
+.whatsapp-button:hover {
+  background-color: #128c7e;
+}
